@@ -1,4 +1,4 @@
-# my makefile "jawaher"
+# my makefile 
 
 CC := gcc
 CFLAGS := -c -Wall -Wextra -Werror
