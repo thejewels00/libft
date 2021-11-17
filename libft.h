@@ -1,5 +1,8 @@
 #ifndef _MY_LIBFT_
 #define _MY_LIBFT_
+
+#include <stdlib.h>
+#include <unistd.h>
 int ft_toupper( int c);
 int ft_tolower(int c);
 char *ft_strrchr(const char *s, char c);
