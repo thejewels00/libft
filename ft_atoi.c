@@ -13,22 +13,22 @@
 
 int	ft_atoi(const char *str)
 {
-	int			i;
-	long int	nbr;
-	int			sign;
+	int	i;
+	long 	nbr;
+	int	sign;
 
 	sign = 1;
 	i = 0;
 	nbr = 0;
-	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t'
-		|| str[i] == '\r' || str[i] == '\v' || str[i] == '\f')
+	while (str[i] == ' ' || str[i] >= '\b' && str[i] <= '\r')
 			i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
-		(str[i] == '-') ? (sign = -1) : (sign = 1);
+		if (str[i] == '-')
+			sign = -1;
 		i++;
 	} 
-	while (str[i] >= '0' && str[i] <= '9')
+	while (ft_isdigit(str[i]) && str[i])
 			nbr = nbr * 10 + str[i++] - '0';
 	return (sign * nbr);
 }
