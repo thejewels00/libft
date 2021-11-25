@@ -1,16 +1,4 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: hnabil <marvin@42.fr>                      +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/10/26 15:04:44 by hnabil            #+#    #+#              #
-#    Updated: 2019/11/13 16:41:06 by hnabil           ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
-
+# my makefile
 
 SRC = ft_strdup.c \
 	  ft_strjoin.c \
@@ -19,7 +7,6 @@ SRC = ft_strdup.c \
 	  ft_bzero.c \
 	  ft_strlcpy.c \
 	  ft_calloc.c \
-	  ft_memccpy.c \
 	  ft_strlen.c \
 	  ft_isalnum.c \
 	  ft_memchr.c \
@@ -46,16 +33,9 @@ SRC = ft_strdup.c \
 	  ft_putstr_fd.c \
 	  ft_split.c \
 	  ft_strchr.c \
+	  ft_striteri.c \
 
-SRCB = ft_lstlast_bonus.c \
-	   ft_lstmap_bonus.c \
-	   ft_lstnew_bonus.c \
-	   ft_lstadd_back_bonus.c \
-	   ft_lstadd_front_bonus.c \
-	   ft_lstclear_bonus.c \
-	   ft_lstdelone_bonus.c \
-	   ft_lstiter_bonus.c \
-	   ft_lstsize_bonus.c \
+SRCB =  ft_lstnew_bonus.c \
 
 NAME = libft.a
 
