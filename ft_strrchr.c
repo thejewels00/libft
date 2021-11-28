@@ -6,18 +6,22 @@
 /*   By: jchennak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 20:59:10 by jchennak          #+#    #+#             */
-/*   Updated: 2021/11/11 22:41:13 by jchennak         ###   ########.fr       */
+/*   Updated: 2021/11/28 16:22:45 by jchennak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const	char *s, char c)
+#include "libft.h"
+
+char	*ft_strrchr(const	char *s,int  c)
 {
 	int	i;
 
+	if (c < 0 || c > 126)
+		return ((char *)s);
 	i = ft_strlen(s);
 	while (i >= 0)
 	{
-		if (s[i] == c)
+		if (s[i] ==  (char)c)
 			return ((char *)(s + i));
 		i--;
 	}

@@ -6,7 +6,7 @@
 /*   By: jchennak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 21:07:02 by jchennak          #+#    #+#             */
-/*   Updated: 2021/11/13 01:43:01 by jchennak         ###   ########.fr       */
+/*   Updated: 2021/11/28 16:26:43 by jchennak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@ char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
+	if (c < 0 || c > 126)
+		return ((char *)s);
 	i = 0;
 	while (s[i] != (char)c && s[i] != '\0')
 		i++;

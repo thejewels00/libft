@@ -6,7 +6,7 @@
 /*   By: jchennak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 21:04:14 by jchennak          #+#    #+#             */
-/*   Updated: 2021/11/13 01:05:38 by jchennak         ###   ########.fr       */
+/*   Updated: 2021/11/29 00:02:46 by jchennak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,37 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	dstlen;
-	size_t	lensrc;
+	size_t	j;
+	size_t	k;
 	size_t	i;
 
-	dstlen = ft_strlen(dst);
-	lensrc = ft_strlen(src);
-	if (dstsize <= dstlen)
-		lensrc += dstzise;
-	else 
-		lensrc += dstlen;
+	if (!dstsize)
+		return(ft_strlen(src));
+	j = ft_strlen(dst);
+	k = ft_strlen(src);
 	i = 0;
-	if (size)
+	if (j > dstsize)
+		return ( k + dstsize);
+	while ( j + i < dstsize - 1  && src[i])
 	{
-		while (lensrc < size - 1 && src[i])
-		{
-			dst[destlen] = src[i];
-			dstlen++;
-			i++;
-		}
-		dst[dstlen] = '\0';
+		dst[j + i] = src[i];
+		i++;
 	}
-	return (lensrc);
-}
+	dst[j + i] = '\0';
+	return (j + k);
+}/*
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+	char dest[30]; memset(dest, 0, 30);
+	char * src = (char *)"AAAAAAAAA";
+	dest[0] = 'B';
+
+	printf("%zu\n", ft_strlcat(0, src, 0));
+	printf("%s\n", dest);
+	printf("%zu\n", strlcat(0, src, 0));
+	printf("%s\n", dest);
+}*/
+

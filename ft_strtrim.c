@@ -1,8 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jchennak <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/27 18:42:23 by jchennak          #+#    #+#             */
+/*   Updated: 2021/11/28 23:35:42 by jchennak         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
 
 static int	ft_exist(char const *set, char a)
 {
-	while(*set)
+	while (*set)
 	{
 		if (*set == a)
 			return (1);
@@ -25,8 +36,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	if (i == len)
 		return (ft_strdup(""));
-	while (ft_exist(set,s1[len - 1]))
+	len--;
+	while (ft_exist(set, s1[len]))
 		len--;
-	res = ft_substr(s1, i, len + i - 1);
+	res = ft_substr(s1, i, len - i + 1);
 	return (res);
 }
