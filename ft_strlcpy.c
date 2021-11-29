@@ -6,10 +6,9 @@
 /*   By: jchennak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 21:03:09 by jchennak          #+#    #+#             */
-/*   Updated: 2021/11/13 18:43:38 by jchennak         ###   ########.fr       */
+/*   Updated: 2021/11/29 17:23:08 by jchennak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
@@ -18,8 +17,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
 	if (dstsize == 0)
 		return (ft_strlen(src));
-	if (!src)
-		return (0);
 	i = 0;
 	while (src[i] && i < dstsize - 1)
 	{

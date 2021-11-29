@@ -6,10 +6,11 @@
 /*   By: jchennak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 14:05:32 by jchennak          #+#    #+#             */
-/*   Updated: 2021/11/28 23:52:09 by jchennak         ###   ########.fr       */
+/*   Updated: 2021/11/29 12:59:04 by jchennak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
