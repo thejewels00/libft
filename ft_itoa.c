@@ -6,7 +6,7 @@
 /*   By: jchennak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 18:16:24 by jchennak          #+#    #+#             */
-/*   Updated: 2021/11/27 21:56:59 by jchennak         ###   ########.fr       */
+/*   Updated: 2021/11/29 21:33:13 by jchennak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -47,11 +47,3 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-/*
-#include <stdio.h>
-int main()
-{
-	int n;
-	n = 1337;
-	printf("voila votre chaine %s",ft_itoa(n));
-}*/
